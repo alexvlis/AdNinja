@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div class="jumbotron text-center">
+      <h2>test add profile</h2>
+    </div>
+    <form>
+      <input type="text" class="form-control input-lg text-center" value="Advert Name" ng-model="name"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" value="Advert Company" ng-model="company"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" value="Advert Categories" ng-model="category"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" value="File" ng-model="file"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" value="Advert Description" ng-model="description"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" value="Gender" ng-model="gender"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" value="Age" ng-model="age"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" value="Threshold" ng-model="threshold"> <!-- ng-model binds the value of variable to input box -->
+    </form>
+
+    <div class="text-center">
+      <button type="button" class="btn btn-primary btn-lg" ng-click="postForm(name, company, category, file, description, gender, age, threshold)">Request Document JSON</button> <!-- use ng- to run a function when that event occurs (e.g click or mouseover) -->
+    </div>
+
+    <div>
+      <h2>
+        {{ toPrint }} <!-- use curly brackets to access $scope variable -->
+      </h2>
+    </div>
+  </div>

@@ -1,0 +1,36 @@
+html,
+body {
+    margin-top: 0px;
+    overflow: hidden;
+    height: 100%;
+    margin-right:0px;
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    width: 99%;
+    height: 70%;
+}
+
+header{
+  display:none;
+}
+
+h1{
+  text-decoration: underline;
+}
+
+h3{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+.headers{
+  font-family: "Gotham Rounded", Times, serif;
+}
+
+.decription{
+   margin-left: 400px;
+}

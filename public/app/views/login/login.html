@@ -1,0 +1,37 @@
+<style type="text/css">
+
+  input:required:invalid, input:focus:invalid {
+    background-image: url(/images/invalid.png);
+    background-position: right;
+    background-repeat: no-repeat;
+		background-size: 9%;
+  }
+  input:required:valid {
+    background-image: url(/images/valid.png);
+    background-position: right;
+    background-repeat: no-repeat;
+		background-size: 7%;
+  }
+
+</style>
+<div class="backgroundImage">
+  <img>
+</div>
+    <!-- <div class="header-content">
+        <div class="header-content-inner"> -->
+          <div class="loginInfo">
+            <h1 class="AdninjaHeading">AdNinja</h1>
+            <p class="AdninjaPara">Powered by Watson and the cloud.</p>
+            <form>
+              <div class="loginBoxes1">
+              <input type="text" class="form-control input-lg text-center" placeholder="Username" ng-model="username" style="border-radius: 100px; width: 500px; margin-left: 250px; margin-bottom: 6px" required> <!-- ng-model binds the value of variable to input box -->
+              </div>
+              <div class="loginBoxes2">
+              <input type="password" class="form-control input-lg text-center" placeholder="Password" ng-model="password" style="border-radius: 100px; width: 500px; margin-left: 250px; margin-bottom: 15px" required> <!-- ng-model binds the value of variable to input box -->
+              </div>
+            
+            </form>
+            <a ui-sref="app.locations" class="btn btn-primary btn-lg">Login</a>
+          </div>
+        <!-- </div>
+    </div> -->

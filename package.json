@@ -1,0 +1,26 @@
+{
+  "name": "NodejsStarterApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cfenv": "^1.0.3",
+    "chart.js": "^2.2.2",
+    "cloudant": "^1.4.2",
+    "express": "^4.13.4",
+    "faker": "^3.1.0",
+    "ibmiotf": "^0.2.19",
+    "jstat": "^1.5.3",
+    "nano": "^6.2.0",
+    "paper": "^0.10.2",
+    "routes": "^2.1.0",
+    "watson-developer-cloud": "^1.12.2"
+  },
+  "repository": {},
+  "engines": {
+    "node": "4.x"
+  }
+}

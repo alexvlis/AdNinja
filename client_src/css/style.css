@@ -1,0 +1,17 @@
+html,
+body {
+    margin-top: 100px;
+    overflow: hidden;
+    height: 100%;
+    margin-right:10px;
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    width: 100%;
+    height: 50%;
+}
+
+header{
+  display:none;
+}

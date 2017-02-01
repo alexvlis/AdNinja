@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+				<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    </head>
+    <body>
+      <div style="max-width:900px">
+        <canvas id="radarChart" width="800" height="800"></canvas>
+				<script src="http://www.chartjs.org/assets/Chart.js"></script>
+        <script>
+const DELAY = 1000;
+var first = 1;
+var myRadarChart, radarOptions;
+
+setInterval(function() {
+	var data = $.ajax({
+    url: "/Waterloo1/profile",
+    type: "GET",
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: function() {
+			var interests = JSON.parse(data.responseText).interest;
+			if (first) {
+				init(interests);
+				first = !first
+			}
+			else {
+      	drawgraph(interests);
+		  }
+		}
+	});
+}, DELAY);
+
+function init(a) {
+	var labels = [];
+	var values = [];
+
+	for (var field in a) {
+		if (field == "Real_Estate") {
+			labels.push("Real Estate");
+		} else if (field == "Buisiness") {
+			labels.push("Business");
+		} else {
+			labels.push(field);
+		}
+		values.push(a[field].toFixed(2));
+	}
+	radarOptions = {
+		pointLabelFontSize: 20,
+		pointDotRadius :0,
+		animation: false,
+		scaleStartValue: 0,
+		scaleStepWidth: 0.2,
+		scaleSteps: 5,
+		scaleOverride: true
+	};
+	var radarData = {
+		labels: labels,
+		datasets: [{
+			label: 'Current Interests',
+			data: values,
+			fill:true,
+			tension: 0,
+			fillColor: 'rgba(255, 0, 0, 0.2)',
+			strokeColor: 'rgba(255, 0, 0, 1)',
+			borderWidth: 1
+		}]
+	}
+	var ctx = document.getElementById("radarChart").getContext("2d");
+	myRadarChart = new Chart(ctx)
+	myRadarChart.Radar(radarData, radarOptions);
+}
+function drawgraph(a) {
+	var labels = [];
+	var values = [];
+
+	for (var field in a) {
+		if (field == "Real_Estate") {
+			labels.push("Real Estate");
+		} else if (field == "Buisiness") {
+			labels.push("Business");
+		} else {
+			labels.push(field);
+		}
+		values.push(a[field].toFixed(2));
+	}
+	var radarData = {
+		labels: labels,
+		datasets: [{
+			label: 'Current Interests',
+			data: values,
+			fill:true,
+			tension: 0,
+			fillColor: 'rgba(255, 0, 0, 0.2)',
+			strokeColor: 'rgba(255, 0, 0, 1)',
+			borderWidth: 1
+		}]
+	};
+	myRadarChart.Radar(radarData,radarOptions)
+}
+        </script>
+      </div>
+    </body>
+</html>

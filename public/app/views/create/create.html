@@ -1,0 +1,84 @@
+<div class="managerDescription">
+  <h1 class="managerPageTitle" align:"middle">Create an advert</h1>
+  <p class="managerDescriptionPara">This page allows you to create and upload an advert to AdNinja.</p>
+</div>
+
+<div class="form-style-10 ng-scope">
+    <form class="ng-pristine ng-valid">
+      <div class="section">Advert Name &amp; Description</div>
+        <div class="inner-wrap">
+        <label>Enter name of the advert <input type="text" name="field1" placeholder="Advert Name" size="100px" ng-model="name" class="ng-pristine ng-valid ng-empty ng-touched"></label><br>
+        <!-- <input type="file" accept="image/*" placeholder="Upload File" ng-model="file"> ng-model binds the value of variable to input box -->
+        <label>Enter name of the company <input type="text" name="field2" placeholder="Company Name" size="100px" ng-model="company" class="ng-pristine ng-valid ng-empty ng-touched"></label><br>
+        <label>Enter a short description of the advert (Optional) <textarea name="field3" placeholder="Advert Description" width="100px" ng-model="description" class="ng-pristine ng-untouched ng-valid ng-empty"></textarea></label>
+        </div>
+
+        <div class="section">Upload Advert</div>
+          <div class="inner-wrap">
+            <label>Enter image URL <input type="text" name="field4" placeholder="Enter URL of JPG" size="100px" ng-model="fileURL" class="ng-pristine ng-valid ng-empty ng-touched"></label><br>
+        	</div>
+        </form>
+
+
+
+      <div class="section">Advert Target Demographic</div>
+        <div class="inner-wrap">
+          <fieldset>
+          <legend class="legend_form">Please select at least one from the following the interests</legend>
+          <input type="checkbox" name="action" id="automotive" value="automotive" class="vis-hidden new-post-tags" ng-model="demo1"><label class="toggleCategories" for="automotive">Automotive</label>
+          <input type="checkbox" name="action" id="buisiness" value="business" class="vis-hidden new-post-tags" ng-model="demo2"><label class="toggleCategories" for="business">Business</label>
+          <input type="checkbox" name="action" id="careers" value="careers" class="vis-hidden new-post-tags" ng-model="demo3"><label class="toggleCategories" for="careers">Careers</label>
+          <input type="checkbox" name="action" id="education" value="education" class="vis-hidden new-post-tags" ng-model="demo4"><label class="toggleCategories" for="education">Education</label>
+          <input type="checkbox" name="action" id="entertainment" value="entertainment" class="vis-hidden new-post-tags" ng-model="demo5"><label class="toggleCategories" for="entertainment">Entertainment</label>
+          <input type="checkbox" name="action" id="family" value="family" class="vis-hidden new-post-tags" ng-model="demo6"><label class="toggleCategories" for="family">Family</label>
+          <input type="checkbox" name="action" id="fashion" value="fashion" class="vis-hidden new-post-tags" ng-model="demo7"><label class="toggleCategories" for="fashion">Fashion</label>
+          <input type="checkbox" name="action" id="finance" value="finance" class="vis-hidden new-post-tags" ng-model="demo8"><label class="toggleCategories" for="finance">Finance</label>
+          <input type="checkbox" name="action" id="food" value="food" class="vis-hidden new-post-tags" ng-model="demo9"><label class="toggleCategories" for="food">Food</label>
+          <input type="checkbox" name="action" id="health" value="health" class="vis-hidden new-post-tags" ng-model="demo10"><label class="toggleCategories" for="health">Health</label>
+          <input type="checkbox" name="action" id="hobbies" value="hobbies" class="vis-hidden new-post-tags" ng-model="demo11"><label class="toggleCategories" for="hobbies">Hobbies</label>
+          <input type="checkbox" name="action" id="home" value="home" class="vis-hidden new-post-tags" ng-model="demo12"><label class="toggleCategories" for="home">Home</label>
+          <input type="checkbox" name="action" id="politics" value="politics" class="vis-hidden new-post-tags" ng-model="demo13"><label class="toggleCategories" for="politics">Politics</label>
+          <input type="checkbox" name="action" id="news" value="news" class="vis-hidden new-post-tags" ng-model="demo14"><label class="toggleCategories" for="news">News</label>
+          <input type="checkbox" name="action" id="pets" value="pets" class="vis-hidden new-post-tags" ng-model="demo15"><label class="toggleCategories" for="pets">Pets</label>
+          <input type="checkbox" name="action" id="real_estate" value="real_estate" class="vis-hidden new-post-tags" ng-model="demo16"><label class="toggleCategories" for="real_estate">Real Estate</label>
+          <input type="checkbox" name="action" id="religion" value="religion" class="vis-hidden new-post-tags" ng-model="demo17"><label class="toggleCategories" for="religion">Religion</label>
+          <input type="checkbox" name="action" id="science" value="science" class="vis-hidden new-post-tags" ng-model="demo18"><label class="toggleCategories" for="science">Science</label>
+          <input type="checkbox" name="action" id="shopping" value="shopping" class="vis-hidden new-post-tags" ng-model="demo19"><label class="toggleCategories" for="shopping">Shopping</label>
+          <input type="checkbox" name="action" id="society" value="society" class="vis-hidden new-post-tags" ng-model="demo20"><label class="toggleCategories" for="society">Society</label>
+          <input type="checkbox" name="action" id="sports" value="sports" class="vis-hidden new-post-tags" ng-model="demo21"><label class="toggleCategories" for="sports">Sports</label>
+          <input type="checkbox" name="action" id="technology" value="technology" class="vis-hidden new-post-tags" ng-model="demo22"><label class="toggleCategories" for="technology">Technology</label>
+          <input type="checkbox" name="action" id="travel" value="travel" class="vis-hidden new-post-tags" ng-model="demo23"><label class="toggleCategories" for="travel">Travel</label>
+      </fieldset>
+      <fieldset ng-model="gender">
+          <legend class="legend_form">Please select any appropriate gender/s</legend>
+          <input type="checkbox" name="action" id="male" value="male" class="vis-hidden new-post-tags" ng-model="gender1"><label class="toggleCategories" for="male">Male</label>
+          <input type="checkbox" name="action" id="female" value="female" class="vis-hidden new-post-tags" ng-model="gender2"><label class="toggleCategories" for="female">Female</label>
+      </fieldset>
+      <fieldset ng-model="age">
+          <legend class="legend_form">Please select one appropriate age range</legend>
+          <input type="radio" name="action" id="16-24" value="16-24" class="vis-hidden new-post-tags" ng-model="age1"><label class="toggleCategories" for="16-24">16-24</label>
+          <input type="radio" name="action" id="25-34" value="25-34" class="vis-hidden new-post-tags" ng-model="age2"><label class="toggleCategories" for="25-34">25-34</label>
+          <input type="radio" name="action" id="35-44" value="35-44" class="vis-hidden new-post-tags" ng-model="age3"><label class="toggleCategories" for="35-44">35-44</label>
+          <input type="radio" name="action" id="45-55" value="44-55" class="vis-hidden new-post-tags" ng-model="age4"><label class="toggleCategories" for="44-55">44-55</label>
+          <input type="radio" name="action" id="55+" value="55+" 		 class="vis-hidden new-post-tags" ng-model="age5"><label class="toggleCategories" for="55+">55+</label>
+      </fieldset>
+    </div>
+
+      <!-- <input type="text" class="form-control input-lg text-center" placeholder="Input Threshold" ng-model="threshold">ng-model binds the value of variable to input box -->
+
+
+    <div class="text-center">
+      <button type="button" class="btn btn-primary btn-lg" ng-click="postForm(name, company, description, age1,age2,age3,age4,age5,gender1,gender2,demo1,demo2,demo3,demo4,demo5,demo6,demo7,demo8,demo9,demo10,demo11,demo12,demo13,demo14,demo15,demo16,demo17,demo18,demo19,demo20,demo21,demo22,demo23,fileURL)" ui-sref="app.manager">Submit</button> <!-- use ng- to run a function when that event occurs (e.g click or mouseover) -->
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

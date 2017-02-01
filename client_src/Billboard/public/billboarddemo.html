@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script
+src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+<script src= "http://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+</div>
+<script>
+const DELAY = 5000;
+var images = [];
+var img = document.createElement("img");
+
+img.width = 1000;
+img.height = 500;
+
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope, $http) {
+	var timer = setInterval(function () {
+		/* Get all the adverts from the database */
+		$http.get('http://adstream.eu-gb.mybluemix.net/Ads').then(function (data) {
+			for (var i = 0; i < data.data.length; i++) {
+				images[data.data[i].id] = data.data[i].doc.file;
+			}
+			/* Get the advert id to display */
+			$http.get('/ad/Waterloo1').then(function successCallback(response) {
+		  	$scope.advert = response.data;
+
+				/* Update the image */
+				img.src = images[response.data];
+			  document.body.appendChild(img);
+				images = []; /* Clear the images list */
+			}, function errorCallback(response) {
+				console.log(response.data);
+			});
+		});
+	}, DELAY);
+});
+</script>
+</head>
+</html>

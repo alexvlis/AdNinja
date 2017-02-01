@@ -1,0 +1,48 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script type="text/javascript" src="test.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+</head>
+</html>
+
+<body ng-app="test-module" ng-controller="testController">
+
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h2>test add profile</h2>
+    </div>
+    <form>
+      <input type="text" class="form-control input-lg text-center" placeholder="Input Advert Name" ng-model="name"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" placeholder="Input Company Name" ng-model="company"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" placeholder="Select Category" ng-model="category"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" placeholder="Upload File" ng-model="file"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" placeholder="Input Description" ng-model="description"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" placeholder="Select Gender" ng-model="gender"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" placeholder="Select Age" ng-model="age"> <!-- ng-model binds the value of variable to input box -->
+
+      <input type="text" class="form-control input-lg text-center" placeholder="Input Threshold" ng-model="threshold"> <!-- ng-model binds the value of variable to input box -->
+    </form>
+
+    <div class="text-center">
+      <button type="button" class="btn btn-primary btn-lg" ng-click="postForm(name, company, category, file, description, gender, age, threshold)">Request Document JSON</button> <!-- use ng- to run a function when that event occurs (e.g click or mouseover) -->
+    </div>
+
+    <div>
+      <h2>
+        {{ toPrint }} <!-- use curly brackets to access $scope variable -->
+      </h2>
+    </div>
+  </div>
+
+</body>

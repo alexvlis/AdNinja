@@ -1,0 +1,38 @@
+
+<div class="managerDescription">
+  <h1 class="managerPageTitle" align:"middle">Manager Page</h1>
+  <p class="managerDescriptionPara">A page to display all adverts currently in the AdNinja database. To see each advert from each company please click on the downward arrow or name of each company for a drop down with icons for each advert. To edit, delete or show and hide these adverts please use the appropriate buttons.</p>
+</div>
+<div class="managerPage">
+<div class = "adverts" ng-repeat="company in companies">
+  <div class = "company"  ng-click="toggle(company)">
+    <h2 class="companyText">{{company}} <img class="arrowButton"src="images/arrow.png" align="right"></h2>
+    <hr>
+  </div>
+
+  <div id="demo" ng-class="{'collapse':accordion[company]}">
+    <div class="manageBox" ng-repeat="advert in advertList[company]">
+      <h4 class="advertTitle">{{advert.doc._id}}</h4>
+      <img class="roundrect" ng-src ="{{advert.doc.file}}"  alt src="/images/altImage.jpg" width = "280px" height="160px"/>
+      <div class = "bottom_aligner"></div>
+      <div class="managerButtons">
+        <br></br>
+        <br></br>
+        <button class="editButton"><img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/gear.png" height = "40px" width = "40px"/></button>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <div class="slider round"></div>
+        </label>
+
+        <button class="deleteButton" ng-click="deleteAd(advert.doc._id)" ><img src="http://www.freeiconspng.com/uploads/garbage-bin-png-8.png" height = "30px" width= "30px"/></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="text-center">
+<a ui-sref="app.advertsMatch" class="btn btn-primary btn-lg">Adverts Match Page</a>
+</div>
