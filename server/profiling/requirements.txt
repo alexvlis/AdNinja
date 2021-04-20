@@ -75,7 +75,7 @@ piston-mini-client==0.7.5
 ply==3.7
 protobuf==3.0.0b2
 psutil==2.2.1
-py==1.4.30
+py==1.10.0
 pyOpenSSL==16.0.0
 pyasn1==0.1.9
 pyasn1-modules==0.0.8
