@@ -112,7 +112,7 @@ tables==3.2.2
 tensorflow==0.9.0
 tornado==4.2.1
 tortoisehg==3.4.1
-urllib3==1.11
+urllib3==1.26.5
 vboxapi==1.0
 w3lib==1.14.3
 wheel==0.29.0
