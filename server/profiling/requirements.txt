@@ -8,7 +8,7 @@ PyJWT==1.0.0
 PyMySQL==0.6.2
 Pygments==2.0.1
 Pyste==0.9.10
-Scrapy==1.1.1
+Scrapy==1.8.1
 Twisted==16.3.0
 Twisted-Conch==15.2.1
 Twisted-Core==15.2.1
