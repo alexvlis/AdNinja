@@ -44,7 +44,7 @@ f.lux-indicator-applet==1.1.8
 funcsigs==0.4
 gmpy==1.17
 gyp==0.1
-html5lib==0.999
+html5lib==0.99999999
 httplib2==0.9
 idna==2.1
 iniparse==0.4
